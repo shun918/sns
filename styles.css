@@ -1,0 +1,138 @@
+body {
+    font-family: serif;
+    font-size: 15px;
+    line-height: 1.8;
+    letter-spacing: .8px;
+    word-break: break-all;
+    margin: 0px; 
+    padding: 0px; 
+    min-height: 100vh;
+    color: #333;
+}
+.wrapper {
+    background-color: rgba(255, 255, 255, 0.753);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 0 1%;
+    max-width: 1110px;
+}
+.main-wrapper{
+    min-height: 80vh;
+    display: flex;
+    flex: 1;
+}
+header {
+    height: auto;
+}
+.logo-title {
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-top: 20px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 88px;
+    font-weight: normal;
+    line-height: 1;
+    display: block;
+    letter-spacing: .1em;
+    color: #726a6e;
+}
+nav {
+    padding: 20px;
+    width: 150px;
+    border: solid 3px gray;
+    border-radius: 0.5em;
+}
+main {
+    flex: 1;
+}
+.upload-box {
+    text-align:center;
+    height: 70px;
+}
+/* .display-box{ */
+    /* border: solid;
+    flex: 1; */
+    /* background-color: #726a6e; */
+/* } */
+.list-unstyled{
+    list-style:none;
+    margin-left: -15px;
+}
+.list-array{
+    float: left;
+    margin-right: 7px;
+}
+aside {
+    padding: 20px;
+    border: solid 3px gray;
+    border-radius: 0.5em;
+    width: 200px;
+}
+footer {
+    margin-top:50px;
+}
+.page-top {
+    font-size: 12px;
+    font-weight: bold;
+    display: block;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+    background-color: #818181;
+}
+#modal-share{
+    text-align:left;
+}
+#modal-overlay {
+    z-index:2; /*デモではheader,footerをz-index:1にしたので それより上げています*/
+    display:none; /*jsでフェードインされるまでdisplay:none*/
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh; /*100vhでビューポートの高さいっぱいになります*/
+    background-color:rgba(0,0,0,.5)} /*これは好きな色・透明度で*/
+a.modal-syncer:hover {cursor:pointer} /*カーソルをポインタに*/
+.modal-content, #modal-share{
+    position:fixed;
+    display:none; /*jsでフェードインされるまでdisplay:none*/
+    z-index:3; /*オーバーレイより上に*/
+    margin:10px;
+    padding:15px;
+    border-radius:20px;
+    background:#fff
+}
+.modal-content img, .modal-content video {
+    width:auto;
+    max-height:50vh
+}
+.modal-content h1 {font-size:120%; margin-bottom:0.5em}
+.modal-content p {max-width:565px; text-align:left}
+a.modal-close { /*クローズボタンは何でも好きなスタイルでOK*/
+    position:absolute;
+    top:0;
+    right:10px;
+    color:#b29c33;
+    font-size:35px;
+    line-height:1;
+    font-weight:bold;
+    text-decoration:none
+}
+a.modal-close:hover {cursor:pointer} /*カーソルをポインタに*/
+
+.btn-good{
+    display: inline-block;
+    padding: 0 8px;
+    cursor: pointer;
+}
+.btn-good:hover{
+    color: #f44336;
+}
+.active{
+    color: #f44336;
+}
+.btn-good .active{
+    color: #f44336;
+}
