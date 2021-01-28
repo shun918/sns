@@ -144,7 +144,7 @@ EOM;
     <h1>メール確認画面</h1>
 		<!-- 以下練習用 -->
 		<p>↓このURLが記載されたメールが届きます。</p>
-    <a href="https://infinite-woodland-86316.herokuapp.com/registration_form.php"></a>
+    <a href="https://infinite-woodland-86316.herokuapp.com/registration_form.php">ユーザー登録へ</a>
 	<!-- エラーがなければ -->
     <!-- <?php if (count($errors) === 0): ?> （本番時コメント解除）-->
     <p><?=$message?></p>
