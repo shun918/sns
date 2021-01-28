@@ -143,17 +143,17 @@ EOM;
 <body>
     <h1>メール確認画面</h1>
 	<!-- エラーがなければ -->
-    <?php if (count($errors) === 0): ?>
+    <!-- <?php if (count($errors) === 0): ?> （コメント解除）-->
     <p><?=$message?></p>
     <p>↓このURLが記載されたメールが届きます。</p>
     <a href="<?=$url?>"><?=$url?></a>
-	<!-- エラーがあれば -->
-    <?php elseif(count($errors) > 0): ?>
-    <?php
+	<!-- エラーがあれば （本番時稼働させる）-->
+    <!-- <?php elseif(count($errors) > 0): ?> （コメント解除）-->
+    <!-- <?php
     foreach($errors as $value){
         echo "<p>".$value."</p>";
     }
-    ?>
+    ?> （コメント解除）-->
 	<!-- 一つ前のページの戻るボタン -->
     <input type="button" value="戻る" onClick="history.back()">
     <?php endif; ?>
