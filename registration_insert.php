@@ -68,42 +68,48 @@ try{
 	
  	//セッションを破棄する
  	session_destroy();
- 	
-	require 'src/Exception.php';
-	require 'src/PHPMailer.php';
-	require 'src/SMTP.php';
-	require 'setting.php';
+	 
+	/*
+	* メール送信処理
+	* 登録されたメールアドレスへメールをお送りする。
+	* 今回はメール送信はしないためコメント
+	*/
+
+	// require 'src/Exception.php';
+	// require 'src/PHPMailer.php';
+	// require 'src/SMTP.php';
+	// require 'setting.php';
 	
-	// PHPMailerのインスタンス生成
-	$mail = new PHPMailer\PHPMailer\PHPMailer();
+	// // PHPMailerのインスタンス生成
+	// $mail = new PHPMailer\PHPMailer\PHPMailer();
 
-	$mail->isSMTP(); // SMTPを使うようにメーラーを設定する
-	$mail->SMTPAuth = true;
-	$mail->Host = MAIL_HOST; // メインのSMTPサーバー（メールホスト名）を指定
-	$mail->Username = MAIL_USERNAME; // SMTPユーザー名（メールユーザー名）
-	$mail->Password = MAIL_PASSWORD; // SMTPパスワード（メールパスワード）
-	$mail->SMTPSecure = MAIL_ENCRPT; // TLS暗号化を有効にし、「SSL」も受け入れます
-	$mail->Port = SMTP_PORT; // 接続するTCPポート
+	// $mail->isSMTP(); // SMTPを使うようにメーラーを設定する
+	// $mail->SMTPAuth = true;
+	// $mail->Host = MAIL_HOST; // メインのSMTPサーバー（メールホスト名）を指定
+	// $mail->Username = MAIL_USERNAME; // SMTPユーザー名（メールユーザー名）
+	// $mail->Password = MAIL_PASSWORD; // SMTPパスワード（メールパスワード）
+	// $mail->SMTPSecure = MAIL_ENCRPT; // TLS暗号化を有効にし、「SSL」も受け入れます
+	// $mail->Port = SMTP_PORT; // 接続するTCPポート
 
-	// メール内容設定
-	$mail->CharSet = "UTF-8";
-	$mail->Encoding = "base64";
-	$mail->setFrom(MAIL_FROM,MAIL_FROM_NAME);
-	$mail->addAddress($mailTo, '受信者さん'); //受信者（送信先）を追加する
-	$mail->addReplyTo('web@sample.com','返信先');
-	//    $mail->addCC('xxxxxxxxxx@xxxxxxxxxx'); // CCで追加
-	//    $mail->addBcc('xxxxxxxxxx@xxxxxxxxxx'); // BCCで追加
-	$mail->Subject = MAIL_SUBJECT2; // メールタイトル
-	$mail->isHTML(true);    // HTMLフォーマットの場合はコチラを設定します
-	$body = '登録が完了しました。';
+	// // メール内容設定
+	// $mail->CharSet = "UTF-8";
+	// $mail->Encoding = "base64";
+	// $mail->setFrom(MAIL_FROM,MAIL_FROM_NAME);
+	// $mail->addAddress($mailTo, '受信者さん'); //受信者（送信先）を追加する
+	// $mail->addReplyTo('web@sample.com','返信先');
+	// //    $mail->addCC('xxxxxxxxxx@xxxxxxxxxx'); // CCで追加
+	// //    $mail->addBcc('xxxxxxxxxx@xxxxxxxxxx'); // BCCで追加
+	// $mail->Subject = MAIL_SUBJECT2; // メールタイトル
+	// $mail->isHTML(true);    // HTMLフォーマットの場合はコチラを設定します
+	// $body = '登録が完了しました。';
 
-	$mail->Body  = $body; // メール本文
-	// メール送信の実行
-	if(!$mail->send()) {
-		$errors['mail_error'] = "メールの送信に失敗しました。";
-	} else {
-		$message = "登録が完了しました。";
-	}
+	// $mail->Body  = $body; // メール本文
+	// // メール送信の実行
+	// if(!$mail->send()) {
+	// 	$errors['mail_error'] = "メールの送信に失敗しました。";
+	// } else {
+	// 	$message = "登録が完了しました。";
+	// }
 	
 }catch (PDOException $e){
 	//トランザクション取り消し（ロールバック）
