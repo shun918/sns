@@ -1,8 +1,8 @@
 <?php
 //データベース情報
-define('DSN', 'mysql:host=us-cdbr-east-03.cleardb.com;dbname=heroku_e212e29796a67ac;charset=utf8');
-define('DB_USER', 'b5526f85564637');
-define('DB_PASS', '71d84f06');
+define('DSN', 'mysql:***** ;dbname=******;charset=utf8');
+define('DB_USER', '******');
+define('DB_PASS', '******');
 
 function db_connect(){
 	try {//データベース接続
