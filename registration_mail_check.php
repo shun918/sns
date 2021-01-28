@@ -142,20 +142,23 @@ EOM;
 </head>
 <body>
     <h1>メール確認画面</h1>
+		<!-- 以下練習用 -->
+		<p>↓このURLが記載されたメールが届きます。</p>
+    <a href="https://infinite-woodland-86316.herokuapp.com/registration_form.php"></a>
 	<!-- エラーがなければ -->
-    <!-- <?php if (count($errors) === 0): ?> （コメント解除）-->
+    <!-- <?php if (count($errors) === 0): ?> （本番時コメント解除）-->
     <p><?=$message?></p>
     <p>↓このURLが記載されたメールが届きます。</p>
     <a href="<?=$url?>"><?=$url?></a>
 	<!-- エラーがあれば （本番時稼働させる）-->
-    <!-- <?php elseif(count($errors) > 0): ?> （コメント解除）-->
+    <!-- <?php elseif(count($errors) > 0): ?> （本番時コメント解除）-->
     <!-- <?php
     foreach($errors as $value){
         echo "<p>".$value."</p>";
     }
-    ?> （コメント解除）-->
+    ?> （本番時コメント解除）-->
 	<!-- 一つ前のページの戻るボタン -->
     <input type="button" value="戻る" onClick="history.back()">
-    <?php endif; ?>
+    <!-- <?php endif; ?> (本番時コメント解除) -->
 </body>
 </html>
