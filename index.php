@@ -29,9 +29,9 @@ session_start(); // セッション開始
         <div class="main-wrapper">
             <nav>
               <ul class="request">
-                <li><a href="./main.php" >all</a></li>
-                <li><a href="">picture</a></li>
-                <li><a href="">movie</a></li>
+                <li><a href="./index.php" >all</a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
               </ul>
             </nav>
 
